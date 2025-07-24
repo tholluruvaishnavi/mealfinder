@@ -1,0 +1,455 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fdfdfd;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e65100;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  color: white;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hero {
+  background: url(./m.jpg) center/cover no-repeat;
+  text-align: center;
+  height: 400px;
+  padding: 40px 10px;
+}
+
+.search-box {
+  margin: 1rem 0;
+}
+
+.search-box input {
+  padding: 0.5rem;
+  width: 300px;
+  border-radius: 20px;
+  border: none;
+  height: 40px;
+}
+
+.search-box button {
+  padding: 0.5rem;
+  border: none;
+  background: #e65100;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+main {
+  padding: 10px;
+  margin: 10px;
+  background: #fff;
+}
+
+.categories-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.categories-section h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #e65100;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.category-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 200px
+}
+
+.category-card:hover {
+  transform: scale(1.04);
+}
+
+.category-card img {
+  width: 250px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+.category-card p {
+  background: #e65100;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.meals-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.meal-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s;
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.meal-card:hover {
+  transform: scale(1.02);
+}
+
+.meal-card img {
+  width: 200px;
+  object-fit: cover;
+  padding: 10px;
+  margin: 10px;
+}
+
+.meal-card p {
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.meal-details {
+  padding: 20px;
+  margin: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meal-details img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 1rem auto;
+}
+
+.meal-header {
+  background-color: #e65100;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+.meal-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 20px;
+  border: 1px solid #e65100;
+  border-radius: 0 0 10px 10px;
+  background-color: #fff8f1;
+}
+
+.meal-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  height: 519px;
+}
+
+.meal-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.meal-info h3 {
+  color: #e65100;
+  margin: 20px 0;
+  padding: 10px;
+  border-bottom: 3px solid #e65100;
+}
+
+.meal-info p {
+  font-size: 16px;
+  margin: 10px;
+  padding: 5px 10px;
+}
+
+.meal-instructions {
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #e65100;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.meal-instructions h4 {
+  margin-bottom: 10px;
+  color: #e65100;
+}
+
+.meal-instructions p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.meal-instructions i {
+  color: #e65100;
+  padding: 8px;
+}
+
+.back-btn {
+  background: #e65100;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-btn:hover {
+  background: #d84315;
+}
+
+.menu {
+  position: absolute;
+  right: 1rem;
+  top: 4rem;
+  background: white;
+  box-shadow: 0 0 10px #00000033;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: none;
+  width: 280px;
+  z-index: 1001;
+}
+
+.menu a {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+}
+
+.menu a:hover {
+  background: #f5f5f5;
+  color: #e65100;
+}
+
+.menu-close {
+  text-align: right;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #e65100;
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 24px;
+  margin: 20px 0 10px;
+  padding-left: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #e65100;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.section-title+p {
+  color: #555;
+  line-height: 1.5;
+  border: 2px solid #e65100;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.str-tags {
+  border: 2px solid #e65100;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
+  color: #e65100;
+}
+
+.orange-bar {
+  background-color: #e65100;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.ingredients-box {
+  background-color: #e65100;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.ingredients-box h4 {
+  color: white;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.ingredient-list {
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.ingredient-list li {
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-bottom: 6px;
+  list-style: decimal inside;
+}
+
+.measure-box {
+  background: #fdfdfd;
+  border: 1px solid #e65100;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.measure-box h4 {
+  margin-bottom: 10px;
+  color: #e65100;
+}
+
+.measure-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.measure-list li {
+  list-style: none;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .search-box input {
+    width: 80%;
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meals-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .search-box input {
+    width: 90%;
+  }
+
+  .meal-card,
+  .category-card,
+  .meal-details,
+  .meal-img img {
+    width: 100%;
+  }
+
+  .meal-info h3,
+  .meal-info p {
+    padding: 5px;
+    margin: 10px 0;
+  }
+
+  .ingredient-tags,
+  .measure-list {
+    grid-template-columns: 1fr;
+  }
+
+  .categories,
+  .meals-section {
+    grid-template-columns: 1fr;
+  }
+}
